@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Funny John Club</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ХЕДЕР -->
+  <header class="header container">
+    <div class="logo"><img src="./src/Logo.png" alt="Funny John Club" class="header-logo"></div>
+    <button class="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="#program">Программа</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- СОБЫТИЯ -->
+    <section class="section">
+      <h1 class="section-title">КАЛЕНДАРЬ БЛИЖАЙШИХ МЕРОПРИЯТИЙ</h1>
+      <div class="events" id="events"></div>
+    </section>
+
+    <!-- СЛАЙДЕР -->
+    <section class="section">
+      <div class="swiper slider">
+        <div class="swiper-wrapper" id="slider-wrapper"></div>
+      </div>
+
+      <div class="slider-navigation">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer container">
+    <div class="footer-contacts">
+      <h3>Контакты</h3>
+      <div id="contacts-container"></div>
+    </div>
+    <div class="footer-links" id="footer-links"></div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <h2>Заявка на участие</h2>
+      <form class="modal-form" id="application-form">
+        <div class="form-group">
+          <input type="text" placeholder="Фамилия Имя" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Телефон" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="E-mail" required>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Компания">
+        </div>
+        <div class="form-group">
+          <input type="number" placeholder="Количество участников" min="1" required>
+        </div>
+        <div class="form-agreement">
+          <label>
+            <input type="checkbox" required>
+            Нажимая кнопку Участвовать, подтверждаю согласие на обработку моих персональных данных
+          </label>
+        </div>
+        <button type="submit" class="form-submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
